@@ -1,4 +1,7 @@
 #!/usr/bin/python3
 
+letters = ''
 for i in range(ord('a'), ord('z') + 1):
-    print("{}".format(chr(i).lower()), end='')
+    letters += chr(i)
+
+print("{}".format(letters), end='')
