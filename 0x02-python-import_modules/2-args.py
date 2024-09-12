@@ -2,22 +2,22 @@
 from sys import argv
 
 if __name__ == "__main__":
-    len = len(argv) - 1
+    len = len(argv)
 
-    if len == 0:
+    if len == 1:
         print("0 arguments.")
 
     else:
-        if len == 1:
+        if len == 2:
             print("1 argument:")
         else:
-            print("{} arguments:".format(len))
+            print("{} arguments:".format(len - 1))
 
-        counter = 0
+        c = 0
         for i in argv:
-            if counter == 0:
-                counter += 1
+            if c == 0:
+                c += 1
                 continue
 
-            print("{}: {}".format(counter, argv[counter]))
-            counter += 1
+            print("{}: {}".format(c, argv[c]))
+            c += 1
