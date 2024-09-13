@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-exec("x = '#pythoniscool' ; exec('print(x)')")
+with open('/dev/stdout', 'w') as f:
+    f.write('#pythoniscool\n')
