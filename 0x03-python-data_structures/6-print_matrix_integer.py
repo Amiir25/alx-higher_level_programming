@@ -5,7 +5,7 @@ def print_matrix_integer(matrix=[[]]):
     for i in matrix:
         y = 0
         for j in range(len(matrix[x])):
-            print(f"{i[y]} ", end='')
+            print("{:d} ".format(i[y]), end='')
             y += 1
         x += 1
         print('')
