@@ -10,7 +10,7 @@ def main():
 
     a = int(argv[1])
     b = int(argv[3])
-    operator = argv[2]
+    operator = str(argv[2])
 
     if operator == '+':
         result = add(a, b)
