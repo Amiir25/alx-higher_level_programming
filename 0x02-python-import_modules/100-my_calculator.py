@@ -2,10 +2,9 @@
 from sys import argv, exit
 from calculator_1 import add, sub, mul, div
 
-if __name__ == "__main__":
-    len = len(argv)
 
-    if len - 1 != 3:
+def main():
+    if len(argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
@@ -13,15 +12,20 @@ if __name__ == "__main__":
     b = int(argv[3])
     operator = argv[2]
 
-    match operator:
-        case '+':
-            print("{} + {} = {}".format(a, b, add(a, b)))
-        case '-':
-            print("{} - {} = {}".format(a, b, sub(a, b)))
-        case '*':
-            print("{} * {} = {}".format(a, b, mul(a, b)))
-        case '/':
-            print("{} / {} = {}".format(a, b, div(a, b)))
-        case _:
-            print("Unknown operator. Available operators: +, -, * and /")
-            exit(1)
+    if operator == '+':
+        result = add(a, b)
+    elif operator == '-':
+        result = sub(a, b)
+    elif operator == '*':
+        result = mul(a, b)
+    elif operator == '/':
+        result = div(a, b)
+    else:
+        print("Unkown operator. Available operators: +, -, * and /")
+        exit(1)
+
+    print("{} {} {} = {}".format(a, operator, b, result))
+
+
+if __name__ == "__main__":
+    main()
