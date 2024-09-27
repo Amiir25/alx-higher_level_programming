@@ -11,7 +11,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *ptr;
 
-	if (!list)
+	if (list == NULL)
 		exit(EXIT_FAILURE);
 
 	ptr = list;
