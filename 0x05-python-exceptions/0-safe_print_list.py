@@ -2,18 +2,19 @@
 
 def safe_print_list(my_list=[], x=0):
     count = 0
+    for i in my_list:
+        if count == x:
+            break
 
-    try:
-        for i in my_list:
-            if count == x:
-                break
-
+        try:
             if i >= 0 or i <= 9:
                 print("{:d}".format(i), end='')
-                count += 1
-        print("")
 
-    except IndexError:
-        print("Unknown Error")
+        except TypeError:
+            print("Unknown Error")
+
+        count += 1
+
+    print("")
 
     return count
