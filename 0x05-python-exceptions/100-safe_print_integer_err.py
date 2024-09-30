@@ -2,7 +2,7 @@
 import sys
 
 
-def safe_print_integer(value):
+def safe_print_integer_err(value):
 
     try:
         if isinstance(value, int):
@@ -11,5 +11,5 @@ def safe_print_integer(value):
 
         return False
 
-    except TypeError:
-        print("Exception", sys.stderr)
+    except TypeError as e:
+        print("Exeption: {}".format(e), file=sys.stderr)
