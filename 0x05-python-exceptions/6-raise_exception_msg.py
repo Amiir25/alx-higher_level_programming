@@ -1,8 +1,4 @@
 #!/usr/bin/python3
 
 def raise_exception_msg(message=""):
-    try:
-        messge
-
-    except NameError:
-        print(message)
+    raise NameError(message)
