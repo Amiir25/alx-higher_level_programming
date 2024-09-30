@@ -11,7 +11,7 @@ def safe_print_list(my_list=[], x=0):
                 print("{:d}".format(i), end='')
 
         except TypeError:
-            print("Unknown Error")
+            print("Error: Non integer value")
 
         count += 1
 
