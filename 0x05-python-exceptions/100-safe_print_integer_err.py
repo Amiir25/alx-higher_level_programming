@@ -12,4 +12,4 @@ def safe_print_integer(value):
         return False
 
     except TypeError:
-        print("Error: Non integer value", file=sys.stderr)
+        print("Exception", sys.stderr)
