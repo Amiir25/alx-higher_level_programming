@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+    This module provides a function that adds two numbers.
+    The numbers can be either integers or floats. Floats 
+    can be coverted into integers.
+"""
 
 def add_integer(a, b=98):
 
