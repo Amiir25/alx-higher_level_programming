@@ -25,6 +25,10 @@ def matrix_divided(matrix, div):
         if len(row) != len(matrix[0]):
             raise TypeError("Each row of the matrix must have the same size")
 
+        for element in row:
+            if type(element) not in [int, float]:
+                raise TypeError("Each element of the matrix must be a number")
+
     if type(div) not in [int, float]:
         raise TypeError("div must be a number")
 
@@ -40,3 +44,8 @@ def matrix_divided(matrix, div):
         new_matrix.append(new_row)
 
     return new_matrix
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("")
