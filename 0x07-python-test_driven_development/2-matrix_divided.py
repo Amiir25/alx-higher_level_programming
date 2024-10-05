@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
     This module provides a function that divides
-    elements of a martix by a given integer and 
+    elements of a martix by a given integer and
     returns a new matrix.
 """
+
 
 def matrix_divided(matrix, div):
     """
@@ -16,11 +17,13 @@ def matrix_divided(matrix, div):
         return
 
     if not isinstance(matrix, list):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError("matrix must be a matrix \
+        (list of lists) of integers/floats")
 
     for row in matrix:
         if not isinstance(row, list):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError("matrix must be a matrix \
+            (list of lists) of integers/floats")
 
         if len(row) != len(matrix[0]):
             raise TypeError("Each row of the matrix must have the same size")
