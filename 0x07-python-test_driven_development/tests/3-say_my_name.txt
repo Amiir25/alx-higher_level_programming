@@ -1,0 +1,28 @@
+This is a text file to test '3-say_my_name.py'
+
+    >>> from say_my_name import say_my_name
+
+Test for strings for first & last name
+
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+Test for single name
+
+    >>> say_my_name("John")
+    My name is John 
+
+Test for integer for first name
+
+    >>> say_my_name(12, "Malcom")
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: first_name must be a string
+
+Test for integer for last name
+
+    >>> say_my_name("Malcom", 12)
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: last_name must be a string
+
