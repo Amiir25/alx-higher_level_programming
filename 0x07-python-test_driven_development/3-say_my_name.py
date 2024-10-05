@@ -5,6 +5,7 @@
     passed to the function.
 """
 
+
 def say_my_name(first_name, last_name=""):
     """
     This function prints "My name is" followed by
