@@ -1,6 +1,6 @@
 This is a text file to test the 2-matrix_divided.py file
 
-    >>> from matrix_divided import matrix_divided
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 Test for simple numbers
 
