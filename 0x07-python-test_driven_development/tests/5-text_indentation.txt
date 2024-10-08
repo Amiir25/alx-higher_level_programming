@@ -1,0 +1,29 @@
+>>> from text_indentation import text_indentation
+>>> text_indentation("Hello, World!")
+Hello, World!
+>>> text_indentation("Now, I'm testing function: text_indentation()")
+Now, I'm testing function:
+<BLANKLINE>
+text_indentation()
+>>> text_indentation("What?     why?          Are you serious?")
+What?
+<BLANKLINE>
+why?
+<BLANKLINE>
+Are you serious?
+<BLANKLINE>
+<BLANKLINE>
+>>> text_indentation("It's done. Let's go to the next")
+It's done.
+<BLANKLINE>
+Let's go to the next
+>>> text_indentation("")
+<BLANKLINE>
+>>> text_indentation(121)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: text must be a string
+>>> text_indentation(None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: text must be a string
