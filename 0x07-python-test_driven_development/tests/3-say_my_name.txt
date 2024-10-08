@@ -1,6 +1,6 @@
 This is a text file to test '3-say_my_name.py'
 
-    >>> from say_my_name import say_my_name
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 Test for strings for first & last name
 
