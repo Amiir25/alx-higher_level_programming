@@ -39,7 +39,7 @@ def text_indentation(text):
 
         i += 1
 
-    print(result.rstrip(), end='')
+    print(result.rstrip())
 
 
 if __name__ == "__main__":
