@@ -20,7 +20,7 @@ def print_square(size=None):
     if isinstance(size, float) and size < 0:
         raise TypeError("size must be an integer")
 
-    if size == None:
+    if size is None:
         raise TypeError("size must be an integer")
 
     for i in range(size):
