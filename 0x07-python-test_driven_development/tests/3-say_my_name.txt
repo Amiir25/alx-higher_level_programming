@@ -26,3 +26,17 @@ Test for integer for last name
       File "<stdin>", line 1, in <module>
     TypeError: last_name must be a string
 
+Test for empty first name
+
+    >>> say_my_name("")
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: empty string
+
+Test for empty first and last names
+
+    >>> say_my_name("", "")
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: empty string
+
