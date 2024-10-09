@@ -1,0 +1,107 @@
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+>>> matrix_mul([[1, 2], [3, 4], [5, 6]], [[1, 2, 3], [4, 5, 6]])
+[[9, 12, 15], [19, 26, 33], [29, 40, 51]]
+
+>>> matrix_mul([[1, 2], [3, 4], [5, 6], [7, 8]], [[1, 2, 3, 4], [5, 6, 7, 8]])
+[[11, 14, 17, 20], [23, 30, 37, 44], [35, 46, 57, 68], [47, 62, 77, 92]]
+
+>>> matrix_mul([[1, 2]], [[1, 2], [3, 4]])
+[[7, 10]]
+
+>>> matrix_mul([[1, 2]], [[1, 2], [3, 4]])
+[[7, 10]]
+
+>>> matrix_mul([[1, 2, 3]], [[1, 2], [3, 4], [5, 6]])
+[[22, 28]]
+
+>>> matrix_mul([[1, 2, 3], [4, 5, 6]], [[1, 2], [3, 4], [5, 6]])
+[[22, 28], [49, 64]]
+
+>>> matrix_mul([[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[1, 2], [3, 4], [5, 6]])
+[[22, 28], [49, 64], [76, 100]]
+
+>>> matrix_mul([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]], [[1, 2], [3, 4], [5, 6]])
+[[22, 28], [49, 64], [76, 100], [103, 136]]
+
+>>> matrix_mul([[1]], [[1, 2]])
+[[1, 2]]
+
+>>> matrix_mul([[1]], [[1, 2, 3]])
+[[1, 2, 3]]
+
+>>> matrix_mul([[1]], [[1, 2, 3, 4]])
+[[1, 2, 3, 4]]
+
+>>> matrix_mul([[1]], [[1, 2, 3, 4, 5]])
+[[1, 2, 3, 4, 5]]
+
+Test with integer m_a
+
+>>> matrix_mul(12, [[1, 2]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: m_a must be a list
+
+Test with integer m_b
+
+>>> matrix_mul([[1, 2]], 12)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: m_b must be a list
+
+Test with empty m_a
+
+>>> matrix_mul([[]], [[1, 2]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: m_a can't be empty
+
+Test with empty m_b
+
+>>> matrix_mul([[1, 2]], [[]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: m_b can't be empty
+
+Test with integer element of m_a
+
+>>> matrix_mul([[1, "S"]], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: m_a should contain only integers or floats
+
+Test with integer element of m_b
+
+>>> matrix_mul([[1, 2]], [[1, "S"], [3, 4]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: m_b should contain only integers or floats
+
+
+Test with unequal size of rows for m_a
+
+>>> matrix_mul([[1, 2], [3, 4, 5]], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: each row of m_a must be of the same type
+
+Test with unequal size of rows for m_b
+
+>>> matrix_mul([[1, 2]], [[1, 2], [3, 4, 5]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: each row of m_b must be of the same type
+
+>>> matrix_mul([[1, 2]], [[1, 2]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: m_a and m_b can't be multiplied
+
+>>> matrix_mul([[1, 2, 3]], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: m_a and m_b can't be multiplied
+
