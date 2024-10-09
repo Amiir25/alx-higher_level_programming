@@ -66,3 +66,8 @@ class TestMaxInteger(unittest.TestCase):
         """Test with a list where tha max is at the beginning"""
 
         self.assertAlmostEqual(max_integer([4, 3, 2, 1]), 4)
+
+    def test_max_in_middle(self):
+        """Test with a list where tha max is at the beginning"""
+
+        self.assertAlmostEqual(max_integer([2, 3, 4, -5, -6]), 4)
