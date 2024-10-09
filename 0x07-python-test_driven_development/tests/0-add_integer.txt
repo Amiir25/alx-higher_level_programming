@@ -19,3 +19,12 @@ TypeError: a must be an integer
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: b must be an integer
+>>> add_integer(2.5, float('NaN'))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: cannot convert float NaN to integer
+>>> add_integer(2.5, float('inf'))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: cannot convert float NaN to integer
+

@@ -7,13 +7,29 @@
 
 
 def add_integer(a, b=98):
-    """Adds two integers or floats"""
+    """
+    Adds two numbers
+   
+    Args:
+        a: the first number (int or float)
+        b: the second number (int or float) default = 98
+
+    Raises:
+        TypeError: if a or b are not integers or floats
+    """
 
     if type(a) not in [int, float]:
         raise TypeError("a must be an integer")
 
     if type(b) not in [int, float]:
         raise TypeError("b must be an integer")
+
+    # checking for NaN and infinity
+    if isinstance(a, float) and (a != a or a == float("inf") or a == -float("inf")):
+        raise ValueError("can not convert float NaN to integer")
+
+    if isinstance(b, float) and (b != b or b == float('inf') or b == -float('inf')):
+        raise ValueError("cannot convert float NaN to integer")
 
     a = int(a)
     b = int(b)
