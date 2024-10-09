@@ -9,7 +9,7 @@
 def add_integer(a, b=98):
     """
     Adds two numbers
-   
+
     Args:
         a: the first number (int or float)
         b: the second number (int or float) default = 98
@@ -25,10 +25,14 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
 
     # checking for NaN and infinity
-    if isinstance(a, float) and (a != a or a == float("inf") or a == -float("inf")):
+    if isinstance(a, float) and (
+        a != a or a == float("inf") or a == -float("inf")
+    ):
         raise ValueError("can not convert float NaN to integer")
 
-    if isinstance(b, float) and (b != b or b == float('inf') or b == -float('inf')):
+    if isinstance(b, float) and (
+        b != b or b == float('inf') or b == -float('inf')
+    ):
         raise ValueError("cannot convert float NaN to integer")
 
     a = int(a)
