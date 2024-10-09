@@ -12,13 +12,11 @@ why?
 <BLANKLINE>
 Are you serious?
 <BLANKLINE>
-<BLANKLINE>
 >>> text_indentation("It's done. Let's go to the next")
 It's done.
 <BLANKLINE>
 Let's go to the next
 >>> text_indentation("")
-<BLANKLINE>
 >>> text_indentation(121)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
