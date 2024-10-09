@@ -23,7 +23,7 @@ def matrix_mul(m_a, m_b):
 
         for element in row:
             if type(element) not in [int, float]:
-                raise ValueError("m_a should contain onlt integers or floats")
+                raise ValueError("m_a should contain only integers or floats")
 
         if len(row) != len(m_a[0]):
             raise TypeError("each row of m_a must be of the same type")
@@ -40,7 +40,7 @@ def matrix_mul(m_a, m_b):
 
         for element in row:
             if type(element) not in [int, float]:
-                raise ValueError("m_b should contain onlt integers or floats")
+                raise ValueError("m_b should contain only integers or floats")
 
         if len(row) != len(m_b[0]):
             raise TypeError("each row of m_b must be of the same type")
