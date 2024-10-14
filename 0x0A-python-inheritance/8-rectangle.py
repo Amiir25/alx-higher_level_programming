@@ -28,7 +28,10 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    """Inherits from 'BaseGeometry' and instantiates private attributes"""
+    """
+    Inherits from 'BaseGeometry' and instantiates private attributes
+    width and height
+    """
 
     def __init__(self, width, height):
         """Instantiates width and height"""
