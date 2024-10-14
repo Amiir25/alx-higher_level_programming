@@ -1,28 +1,28 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> base = BaseGeometry()
->>> base.integer_validator("my_int", 12)
->>> base.integer_validator("width", 89)
->>> base.integer_validator("name", "John")
+>>> base.integer_validator("length", 21)
+>>> base.integer_validator("height", 3)
+>>> base.integer_validator("Mr", "Jo")
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: name must be an integer
 
->>> base.integer_validator("age", 0)
+>>> base.integer_validator("size", 0)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: age must be greater than 0
 
->>> base.integer_validator("distance", -4)
+>>> base.integer_validator("mile", -24)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: distance must be greater than 0
 
->>> base.integer_validator(4, -4)
+>>> base.integer_validator(24, -24)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: 4 must be greater than 0
 
->>> base.integer_validator(-4, 4)
+>>> base.integer_validator(-24, 24)
 >>> base.integer_validator(12, "width")
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
