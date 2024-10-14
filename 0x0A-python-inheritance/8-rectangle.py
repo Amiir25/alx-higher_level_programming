@@ -26,6 +26,7 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
     """Inherits from 'BaseGeometry' and instantiates private attributes"""
 
