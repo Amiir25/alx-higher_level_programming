@@ -8,10 +8,10 @@ raises an exception
 """
 
 
-def BaseGeometry:
+class BaseGeometry:
     """Contains a method that rasies an exception"""
 
     def area(self):
-        """Raises an exception"""
+        """Raises an exception when called"""
 
         raise Exception("area() is not implemented")
