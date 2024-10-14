@@ -37,3 +37,8 @@ Traceback (most recent call last):
 TypeError: test must be an integer
 >>> bg_test.integer_validator("test", 444444444444444)
 
+>>> bg_test.integer_validator(4, True)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 4 must be an integer
+
