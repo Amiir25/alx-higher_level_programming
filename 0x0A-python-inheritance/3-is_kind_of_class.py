@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-2-is_kind_of_class.py
+3-is_kind_of_class.py
 
 This module provides a function that checks if an
 object is an instance a specified class or an instance
