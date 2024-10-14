@@ -1,0 +1,68 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> lists = [6, 2, 8, 4]
+
+>>> my_list = MyList()
+
+>>> my_list = lists
+
+>>> print(my_list)
+[6, 2, 8, 4]
+
+>>> my_list.append(9)
+
+>>> print(my_list)
+[6, 2, 8, 4, 9]
+
+>>> my_list.append(900)
+
+>>> print(my_list)
+[6, 2, 8, 4, 9, 900]
+
+>>> my_list.append("test it")
+
+>>> print(my_list)
+[6, 2, 8, 4, 9, 900, 'test it']
+
+>>> my_list.append("")
+
+>>> print(my_list)
+[6, 2, 8, 4, 9, 900, 'test it', '']
+
+>>> my_list.clear()
+
+>>> print(my_list)
+[]
+
+>>> my_list.insert(0, "A")
+
+>>> print(my_list)
+['A']
+
+>>> my_list.insert(0, 2024)
+
+>>> print(my_list)
+[2024, 'A']
+
+>>> my_list.remove("A")
+
+>>> print(my_list)
+[2024]
+
+>>> my_list.append(21)
+
+>>> my_list.append(12)
+
+>>> my_list.append(201)
+
+>>> my_list.append(210)
+
+>>> my_list.append(120)
+
+>>> print(my_list)
+[2024, 21, 12, 201, 210, 120]
+
+>>> my_list.reverse()
+
+>>> print(my_list)
+[120, 210, 201, 12, 21, 2024]
