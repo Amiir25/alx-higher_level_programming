@@ -1,29 +1,39 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
->>> base = BaseGeometry()
->>> base.integer_validator("length", 21)
->>> base.integer_validator("height", 3)
->>> base.integer_validator("Mr", "Jo")
+>>> bg_test = BaseGeometry()
+>>> bg_test.area()
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-TypeError: name must be an integer
+Exception: area() is not implemented
 
->>> base.integer_validator("size", 0)
+>>> bg_test.integer_validator("test", 4)
+>>> bg_test.integer_validator("test", -4)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-ValueError: age must be greater than 0
+ValueError: test must be greater than 0
 
->>> base.integer_validator("mile", -24)
+>>> bg_test.integer_validator("test", "bg")
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-ValueError: distance must be greater than 0
+TypeError: test must be an integer
 
->>> base.integer_validator(24, -24)
+>>> bg_test.integer_validator("test", 0)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-ValueError: 4 must be greater than 0
+ValueError: test must be greater than 0
 
->>> base.integer_validator(-24, 24)
->>> base.integer_validator(12, "width")
+>>> bg_test.integer_validator("test", None)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-TypeError: 12 must be an integer
+TypeError: test must be an integer
+
+>>> bg_test.integer_validator("test", [1, 2, 3])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: test must be an integer
+
+>>> bg_test.integer_validator("test", -4.4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: test must be an integer
+>>> bg_test.integer_validator("test", 444444444444444)
+
