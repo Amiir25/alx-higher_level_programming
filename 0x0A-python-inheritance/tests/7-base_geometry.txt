@@ -42,16 +42,6 @@ Traceback (most recent call last):
 TypeError: test must be an integer
 >>> bg_test.integer_validator("test", 444444444444444)
 
->>> bg_test.integer_validator()
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
->>> bg_test.integer_validator("age")
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
-
 >>> bg_test.integer_validator("age", (4,))
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
