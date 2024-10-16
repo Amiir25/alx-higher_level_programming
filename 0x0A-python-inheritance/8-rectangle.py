@@ -4,7 +4,7 @@
 8-rectangle.py
 
 This module provides a class 'Rectangle' that inherits
-from class 'BaseGeometry' and instatiates private attributes
+the class 'BaseGeometry' and instatiates private attributes
 'width' and 'height'.
 """
 
@@ -39,7 +39,7 @@ class BaseGeometry:
 
 class Rectangle(BaseGeometry):
     """
-    Inherits from 'BaseGeometry' and instantiates private attributes
+    Inherits the class 'BaseGeometry' and instantiates private attributes
     width and height
     """
 
