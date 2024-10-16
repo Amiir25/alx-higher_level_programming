@@ -82,8 +82,3 @@ class Square(Rectangle):
         """Calculates the square of the size"""
 
         return self.__size ** 2
-
-        def __str__(self):
-            """Returns the string description of the rectangle"""
-
-            return ("Rectangle {}/{}".format(self.__width, self.__height))
