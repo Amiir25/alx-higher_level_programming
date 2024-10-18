@@ -15,7 +15,9 @@ class Base:
 
     def __init__(self, id=None):
         """
-        Instantiates 'id' public instance attribute
+        Instantiates 'id' public instance attribute with the argument value.
+        If 'id' is None, it incerements the '__nb_objects' private class attribute
+        and assignes it to 'id'
 
         Args:
             id (int): the id value
