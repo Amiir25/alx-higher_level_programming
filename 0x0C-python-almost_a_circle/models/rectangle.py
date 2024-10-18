@@ -18,10 +18,10 @@ class Rectangle(Base):
         Instantiates four private instance attributes
 
         Args:
-            width (int)
-            height (int)
-            x (int)
-            y (int)
+            width (int): must be > 0
+            height (int): must be > 0
+            x (int): must be >= 0
+            y (int): must be >= 0
         """
 
         self.__width = width
