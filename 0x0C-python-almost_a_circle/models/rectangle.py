@@ -27,5 +27,53 @@ class Rectangle(Base):
         self.__width = width
         self.__height = height
         self.__x = x
-        self.y = y
+        self.__y = y
         super().__init__(id)
+
+    @property
+    def width(self):
+        """getter for the private __width attribute"""
+
+        return self.__width
+
+    @width.setter
+    def width(self):
+        """setter for the private __width attribute"""
+
+        pass
+
+    @property
+    def height(self):
+        """getter for the private __height attribute"""
+
+        return self.__height
+
+    @height.setter
+    def heigh(self):
+        """setter for the private __height attribute"""
+
+        pass
+
+    @property
+    def x(self):
+        """getter for the private __x attribute"""
+
+        return self.__x
+
+    @x.setter
+    def x(self):
+        """getter for the private __x attribute"""
+
+        pass
+
+    @property
+    def y(self):
+        """getter for the private __x attribute"""
+
+        return self.__y
+
+    @y.setter
+    def y(self):
+        """getter for the private __y attribute"""
+
+        pass
