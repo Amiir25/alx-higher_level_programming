@@ -11,7 +11,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Inherits the 'Base' classof 'base.py' module"""
+    """Inherits the 'Base' class of 'base.py' module"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
