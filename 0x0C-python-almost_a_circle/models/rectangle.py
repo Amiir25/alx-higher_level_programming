@@ -68,7 +68,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """getter for the private __x attribute"""
+        """getter for the private __y attribute"""
 
         return self.__y
 
