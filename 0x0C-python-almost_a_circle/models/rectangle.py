@@ -122,7 +122,8 @@ class Rectangle(Base):
             print(row)
 
     def update(self, *args):
-        """Assignes an srgument to each private instance attribute"""
+        """Applies *args and **kwargs"""
+
 
         if len(args) > 0:
             self.id = args[0]
@@ -138,3 +139,7 @@ class Rectangle(Base):
 
         if len(args) > 4:
             self.y = args[4]
+
+        for key, value in kwargs.items():
+            if key not in args:
+                setattr(self, key, value)
