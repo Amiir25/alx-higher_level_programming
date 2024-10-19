@@ -122,7 +122,7 @@ class Rectangle(Base):
             print(row)
 
     def update(self, *args, **kwargs):
-        """Applies *args and **kwargs"""
+        """Handles args and kwargs"""
 
         attr = ["id", "width", "height", "x", "y"]
 
