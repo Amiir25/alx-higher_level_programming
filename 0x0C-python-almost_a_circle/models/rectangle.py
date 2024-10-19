@@ -31,7 +31,7 @@ class Rectangle(Base):
         super().__init__(id)
 
     def __str__(self):
-        """Overrides the default output"""
+        """Overrides the default isntance string output"""
 
         return ("[Rectangle] ({}) {}/{} - {}/{}".
                 format(self.id, self.x, self.y, self.width, self.height))
