@@ -126,9 +126,9 @@ class Rectangle(Base):
 
         attr = ["id", "width", "height", "x", "y"]
 
-        for idx, value in enumerate(args):
-            if idx < len(attr):
-                setattr(self, attr[idx], value)
+        for index, value in enumerate(args):
+            if index < len(attr):
+                setattr(self, attr[index], value)
 
         if not args:
             for key, value in kwargs.items():
