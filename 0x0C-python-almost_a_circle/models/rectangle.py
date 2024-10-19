@@ -121,25 +121,16 @@ class Rectangle(Base):
             print(" " * self.x, end='')
             print(row)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Applies *args and **kwargs"""
 
+        attr = ["id", "width", "height", "x", "y"]
 
-        if len(args) > 0:
-            self.id = args[0]
+        for idx, value in enumerate(args):
+            if idx < len(attr):
+                setattr(self, attr[idx], value)
 
-        if len(args) > 1:
-            self.width = args[1]
-
-        if len(args) > 2:
-            self.height = args[2]
-
-        if len(args) > 3:
-            self.x = args[3]
-
-        if len(args) > 4:
-            self.y = args[4]
-
-        for key, value in kwargs.items():
-            if key not in args:
-                setattr(self, key, value)
+        if not args:
+            for key, value in kwargs.items():
+                if key in attr:
+                    setattr(self, key, value)
