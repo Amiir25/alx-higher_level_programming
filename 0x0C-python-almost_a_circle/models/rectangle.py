@@ -117,4 +117,6 @@ class Rectangle(Base):
         """Prints the 'Rectangle' instance with the character #"""
 
         row = "#" * self.__width
-        print("\n".join([row] * self.__height))
+        for _ in range(self.__height):
+            print(" " * self.__x, end='')
+            print(row)
