@@ -30,6 +30,12 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def __str__(self):
+        """Overrides the default output"""
+
+        return ("[Rectangle] ({}) {}/{} - {}/{}".
+                format(self.id, self.x, self.y, self.width, self.height))
+
     @property
     def width(self):
         """getter for the private __width attribute"""
