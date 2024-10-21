@@ -11,13 +11,14 @@ all other classes in the project 'Python Almost a Circle'.
 class Base:
     """Manages the id attribute"""
 
+    # Private class attribute
     __nb_objects = 0
 
     def __init__(self, id=None):
         """
         Instantiates 'id' public instance attribute with the argument
         id value. If 'id' is None, it incerements the '__nb_objects'
-        private class attribute and assignes it to 'id'
+        private class attribute and assignes the value to 'id'
 
         Args:
             id (int): the id value
