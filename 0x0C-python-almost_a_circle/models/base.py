@@ -8,6 +8,7 @@ all other classes in the project 'Python Almost a Circle'.
 """
 
 import json
+import os
 
 
 class Base:
@@ -80,3 +81,18 @@ class Base:
 
         dummy_instance.update(**dictionary)
         return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances"""
+
+        filename = "{}.json".format(cls.__name__)
+
+        if not os.path.exists(filename):
+            return []
+
+        with open(filename, 'r', encoding='utf-8') as file:
+            json_string = file.read()
+            list_dict = cls.from_json_string(json_string)
+
+        return [cls.create(**d) for d in list_dict]
