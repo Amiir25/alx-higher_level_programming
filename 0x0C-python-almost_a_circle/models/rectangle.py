@@ -27,7 +27,7 @@ class Rectangle(Base):
         self.y = y
 
     def __str__(self):
-        """Overrides the default isntance string output"""
+        """Overrides the __str__ method to return a formatted output"""
 
         return ("[Rectangle] ({}) {}/{} - {}/{}".
                 format(self.id, self.x, self.y, self.width, self.height))
