@@ -61,9 +61,9 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Converts a json string representation into a list of dictionaries"""
+        """Returns the list of the json string representation"""
 
         if not json_string:
-            return "[]"
+            return []
 
         return json.loads(json_string)
