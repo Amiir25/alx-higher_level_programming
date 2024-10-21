@@ -7,6 +7,8 @@ This module provides a class 'Base' which used as a base of
 all other classes in the project 'Python Almost a Circle'.
 """
 
+import json
+
 
 class Base:
     """Manages the id attribute"""
@@ -30,3 +32,12 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Returns the json string representation of a list of dictionaries"""
+
+        if not list_dictionaries:
+            return "[]"
+
+        return json.dumps(list_dictionaries)
