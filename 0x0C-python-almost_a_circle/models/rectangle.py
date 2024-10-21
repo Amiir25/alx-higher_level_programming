@@ -15,20 +15,16 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        Instantiates four private instance attributes
-
-        Args:
-            width (int): must be > 0
-            height (int): must be > 0
-            x (int): must be >= 0
-            y (int): must be >= 0
+        calls the super class constructor with 'id' and instantiates
+        four private instance attributes
         """
+
+        super().__init__(id)
 
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     def __str__(self):
         """Overrides the default isntance string output"""
@@ -36,6 +32,7 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}".
                 format(self.id, self.x, self.y, self.width, self.height))
 
+    # Getter and Setter for width
     @property
     def width(self):
         """getter for the private __width attribute"""
@@ -54,6 +51,7 @@ class Rectangle(Base):
 
         self.__width = width
 
+    # Getter and Setter for height
     @property
     def height(self):
         """getter for the private __height attribute"""
@@ -72,6 +70,7 @@ class Rectangle(Base):
 
         self.__height = height
 
+    # Getter and Setter for x
     @property
     def x(self):
         """getter for the private __x attribute"""
@@ -90,6 +89,7 @@ class Rectangle(Base):
 
         self.__x = x
 
+    # Getter and Setter for y
     @property
     def y(self):
         """getter for the private __y attribute"""
