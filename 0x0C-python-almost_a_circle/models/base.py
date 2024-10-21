@@ -45,8 +45,8 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """
-        Converts a list of instances into a list of dictionaries and writes a json
-        string representation of the list of dictionaries to a file
+        Converts a list of instances into a list of dictionaries and writes
+        a json string representation of the list of dictionaries to a file
         """
 
         filename = "{}.json".format(cls.__name__)
@@ -58,3 +58,12 @@ class Base:
                 list_dict = [obj.to_dictionary() for obj in list_objs]
                 json_string = cls.to_json_string(list_dict)
                 f.write(json_string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Converts a json string representation into a list of dictionaries"""
+
+        if not json_string:
+            return "[]"
+
+        return json.loads(json_string)
