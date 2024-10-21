@@ -114,15 +114,15 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """Prints the 'Rectangle' instance with the character #"""
+        """
+        Prints 'y' amount of new line, 'x' amount of space and
+        the 'Rectangle' instance with the character #
+        """
 
-        for _ in range(self.y):
-            print()
+        print("\n" * self.y, end='')
 
-        row = "#" * self.width
         for _ in range(self.height):
-            print(" " * self.x, end='')
-            print(row)
+            print(" " * self.x + "#" * self.width)
 
     def update(self, *args, **kwargs):
         """Handles args and kwargs"""
