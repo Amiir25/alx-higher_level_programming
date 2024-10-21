@@ -44,7 +44,10 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Writes a json string representation of an argument to a file"""
+        """
+        Converts a list of instances into a list of dictionaries and writes a json
+        string representation of the list of dictionaries to a file
+        """
 
         filename = "{}.json".format(cls.__name__)
         with open(filename, 'w', encoding='utf-8') as f:
