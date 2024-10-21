@@ -125,7 +125,7 @@ class Rectangle(Base):
             print(" " * self.x + "#" * self.width)
 
     def update(self, *args, **kwargs):
-        """Handles args and kwargs"""
+        """Assignes values to attributes using *args or **kwargs"""
 
         attr = ["id", "width", "height", "x", "y"]
 
