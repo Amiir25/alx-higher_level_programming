@@ -10,7 +10,7 @@ import unittest
 from models.base import Base
 
 
-class TestBase(unittest.Testcase):
+class TestBase(unittest.TestCase):
     """Test the 'Base' class"""
 
     def test_auto_increment_id(self):
@@ -39,7 +39,7 @@ class TestBase(unittest.Testcase):
 
         json_string = '[{"id": 1}, {"id": 2}]'
         dict_list = Base.from_json_string(json_string)
-        self.asserEqual(dict_list, [{'id': 1}. {'id': 2}])
+        self.assertEqual(dict_list, [{'id': 1}, {'id': 2}])
 
     def test_create(self):
         """Tests create method creates instance with attributes."""

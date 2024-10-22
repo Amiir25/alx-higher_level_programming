@@ -7,7 +7,7 @@ A test file for the 'rectangle.py' module
 """
 
 import unittest
-from models.rectangle import Rctangle
+from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
@@ -20,8 +20,8 @@ class TestRectangle(unittest.TestCase):
         r2 = Rectangle(3, 4, 1, 2, 10)
         self.assertEqual(r1.width, 3)
         self.assertEqual(r1.height, 4)
-        self.assertEqual(r1.x, 1)
-        self.assertEqual(r1.y, 2)
+        self.assertEqual(r2.x, 1)
+        self.assertEqual(r2.y, 2)
         self.assertEqual(r2.id, 10)
 
     def test_area(self):
@@ -60,7 +60,7 @@ class TestRectangle(unittest.TestCase):
         """Tests __str__ method output"""
 
         r = Rectangle(4, 6, 2, 1, 12)
-        self.assertEqual(str(r), "[Rectangle] (12) 2/1 = 4/6")
+        self.assertEqual(str(r), "[Rectangle] (12) 2/1 - 4/6")
 
 
 if __name__ == "__main__":
