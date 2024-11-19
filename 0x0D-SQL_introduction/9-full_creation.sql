@@ -5,9 +5,9 @@ CREATE TABLE IF NOT EXIST second_table(
     name VARCHAR(256),
     score INT
 );
-INSERT INTO second_table (name, score)
+INSERT INTO second_table (id, name, score)
 VALUES
-    ("John", 10),
-    ("Alex", 3),
-    ("Bob", 14),
-    ("George", 8);
+    (1, "John", 10),
+    (2, "Alex", 3),
+    (3, "Bob", 14),
+    (4, "George", 8);
