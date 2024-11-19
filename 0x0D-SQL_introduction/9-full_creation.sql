@@ -1,7 +1,7 @@
 -- A SQL query to create a new table and insert
 -- records
 CREATE TABLE IF NOT EXIST second_table(
-    id INT AUTO_INCREMENT,
+    id INT,
     name VARCHAR(256),
     score INT
 );
