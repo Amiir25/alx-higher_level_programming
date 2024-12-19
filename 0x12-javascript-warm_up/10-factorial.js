@@ -3,12 +3,16 @@
 const arg = parseInt(process.argv[2]);
 let fact = 0;
 
-for (let i = arg; i > 0; i--) {
-  fact += i;
+function factorial (f) {
+  fact += f;
+  if (f > 0) {
+    factorial(f - 1);
+  }
 }
 
 if (isNaN(arg)) {
   console.log(1);
 } else {
+  factorial(arg);
   console.log(fact);
 }
