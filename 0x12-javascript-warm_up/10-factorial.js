@@ -12,4 +12,4 @@ function factorial (f) {
 }
 
 const fact = parseInt(process.argv[2], 10);
-console.log(factorial(fact))
+console.log(factorial(fact));
