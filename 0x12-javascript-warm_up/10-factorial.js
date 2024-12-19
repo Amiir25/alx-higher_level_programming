@@ -1,18 +1,15 @@
 #!/usr/bin/node
 
-const arg = parseInt(process.argv[2]);
-let fact = 0;
-
 function factorial (f) {
-  fact += f;
-  if (f > 0) {
-    factorial(f - 1);
+  if (isNaN(f)) {
+    return 1;
   }
+  if (f <= 1) {
+    return 1;
+  }
+
+  return f * factorial(f - 1);
 }
 
-if (isNaN(arg)) {
-  console.log(1);
-} else {
-  factorial(arg);
-  console.log(fact);
-}
+const fact = parseInt(process.argv[2], 10);
+console.log(factorial(fact))
