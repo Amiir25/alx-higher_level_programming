@@ -1,5 +1,4 @@
 #!/usr/bin/node
-
 const arr = process.argv.slice(2).map(arg => parseInt(arg, 10));
 
 if (arr.length < 2) {
