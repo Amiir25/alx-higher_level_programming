@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 
+"""
+0-select_states.py
+
+This module contains a pyhton script that lists all rows of
+'states' table from 'hbtn_0e_0_usa' database.
+"""
+
 import MySQLdb
 import sys
 
