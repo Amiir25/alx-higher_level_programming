@@ -32,7 +32,7 @@ if __name__ == "__main__":
     for row in rows:
         print(row)
 
-    if 'cursor' in local():
+    if 'cursor' in locals():
         cursor.close()
-    if 'db' in local():
+    if 'db' in locals():
         db.close()
