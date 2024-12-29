@@ -3,17 +3,17 @@ import sys
 
 
 if __name__ == "__main__":
-    mysql_user = sys.argv[1]
+    mysql_username = sys.argv[1]
     mysql_passwd = sys.argv[2]
-    mysql_db = sys.argv[3]
+    database_name = sys.argv[3]
 
     try:
         db = MySQLdb.connect(
-            host='localhost',
+            host="localhost",
             port=3306,
-            user=mysql_user,
+            user=mysql_username,
             passwd=mysql_passwd,
-            db=mysql_db
+            db=database_name
         )
 
         cursor = db.cursor()
