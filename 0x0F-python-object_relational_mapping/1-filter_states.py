@@ -27,7 +27,8 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     query = "SELECT * FROM states WHERE name LIKE 'A%'"
-    result = cursor.execute(query)
+    cursor.execute(query)
+    result = cursor.fetchall()
     for row in result:
         print(row)
 
