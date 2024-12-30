@@ -32,7 +32,7 @@ if __name__ == "__main__":
         "FROM cities "
         "JOIN states "
         "ON cities.state_id=state.id"
-        "WHERE cities.state_id='{}'.id "
+        "WHERE states.name='{}' "
         "ORDER BY cities.id"
     ).format(state_name_escaped)
     cursor.execute(query)
