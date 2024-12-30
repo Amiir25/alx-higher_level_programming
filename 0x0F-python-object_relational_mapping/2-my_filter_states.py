@@ -16,7 +16,7 @@ if __name__ == "__main__":
     mysql_username = sys.argv[1]
     mysql_passwd = sys.argv[2]
     database_name = sys.argv[3]
-    matched_name = sys.argv[4]
+    state_name = sys.argv[4]
 
     db = MySQLdb.connect(
         host='localhost',
@@ -27,11 +27,13 @@ if __name__ == "__main__":
     )
 
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    cursor.execute(query, (matched_name,))
-    rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    query = (
+        "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
+    ).format(state_name)
+    cursor.execute(query, (state_name,))
+    states = cursor.fetchall()
+    for state in states:
+        print(state)
 
     if 'cursor' in locals():
         cursor.close()
