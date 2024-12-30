@@ -30,7 +30,7 @@ if __name__ == "__main__":
     state_name_escaped = MySQLdb.escape_string(state_name).decode()
     query = (
         "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
-    ).format(state_name_escaped)
+    ).format(state_name)
     cursor.execute(query)
     states = cursor.fetchall()
     for state in states:
