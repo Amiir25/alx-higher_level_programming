@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
 """
-4-cities_by_state
+5-filter_cities.py
 
-This module contains a python script that lists cities in
-states.
+This module contains a python script that takes in name of a
+state as an argument and lists all cities of that state.
 """
 
 import MySQLdb
@@ -26,7 +26,6 @@ if __name__ == "__main__":
     )
 
     cursor = db.cursor()
-    state_name_escaped = MySQLdb.escape_string(state_name).decode()
     query = (
         "SELECT cities.id, cities.name "
         "FROM cities "
@@ -34,7 +33,7 @@ if __name__ == "__main__":
         "ON cities.state_id=state.id"
         "WHERE states.name='{}' "
         "ORDER BY cities.id"
-    ).format(state_name_escaped)
+    ).format(state_name)
     cursor.execute(query)
     cities = cursor.fetchall()
     for city in cities:
