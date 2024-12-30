@@ -26,10 +26,10 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     query = (
-        "SELECT cities.name, states.name "
-        "FROM states "
-        "JOIN cities "
-        "ON states.id=cities.state_id "
+        "SELECT cities.id, cities.name, states.name "
+        "FROM cities "
+        "JOIN states "
+        "ON cities.state_id=states.id "
         "ORDER BY cities.id"
     )
     cursor.execute(query)
