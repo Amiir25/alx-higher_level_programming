@@ -30,7 +30,7 @@ if __name__ == "__main__":
     password = sys.argv[2]
     database = sys.argv[3]
 
-    connection_string = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-        usename, password, database)
+    connection_string = 'mysql+mysqldb://{}:{}@localhost:{}/{}'.format(
+        usename, password, 3306, database)
     engine = create_engine(connection_string, pool_pre_ping=True)
     Base.metadata.create_all(engine)
