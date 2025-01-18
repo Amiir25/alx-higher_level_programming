@@ -28,8 +28,6 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-#    state_name_escaped = MySQLdb.escape_string(state_name).decode()
-
     query = (
         "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
     )
