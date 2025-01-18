@@ -36,8 +36,11 @@ if __name__ == "__main__":
     )
     cursor.execute(query, (state_name,))
     cities = cursor.fetchall()
+
+    cities_list = []
     for city in cities:
-        print(city)
+        cities_list += city
+    print(city)
 
     if 'cursor' in locals():
         cursor.close()
