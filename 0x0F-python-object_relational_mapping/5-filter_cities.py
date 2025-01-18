@@ -27,14 +27,14 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     query = (
-        "SELECT cities.id, cities.name "
+        "SELECT cities.name "
         "FROM cities "
         "JOIN states "
         "ON cities.state_id=state.id"
-        "WHERE states.name='{}' "
+        "WHERE states.name = %s "
         "ORDER BY cities.id"
-    ).format(state_name)
-    cursor.execute(query)
+    )
+    cursor.execute(query, (state_name,))
     cities = cursor.fetchall()
     for city in cities:
         print(city)
