@@ -29,8 +29,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
     query = (
         "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    )
-    cursor.execute(query, (name_search,))
+    ).format(name_search)
+    cursor.execute(query)
     states = cursor.fetchall()
     for state in states:
         print(state)
