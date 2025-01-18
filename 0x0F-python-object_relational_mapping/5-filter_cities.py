@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
     cities_list = []
     for city in cities:
-        cities_list += city
+        cities_list.append(city)
     print(city)
 
     if 'cursor' in locals():
