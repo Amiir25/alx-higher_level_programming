@@ -32,8 +32,8 @@ if __name__ == "__main__":
 
     query = (
         "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    ) % state_name
-    cursor.execute(query)
+    )
+    cursor.execute(query, (state_name,))
     states = cursor.fetchall()
     for state in states:
         print(state)
