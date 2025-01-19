@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
 """
-This module contains a class definition of 'State' and an instance
-'Base'. The State class inherits Base and is linked to the MySQL
-table 'states'.
+This module contains a class definition of 'State' that inherits
+'Base' and is linked to the MySQL table 'states'.
 """
 
 import sys
@@ -31,6 +30,7 @@ if __name__ == "__main__":
     database = sys.argv[3]
 
     connection_string = 'mysql+mysqldb://{}:{}@localhost:{}/{}'.format(
-        usename, password, 3306, database)
+        usename, password, 3306, database
+    )
     engine = create_engine(connection_string, pool_pre_ping=True)
     Base.metadata.create_all(engine)
