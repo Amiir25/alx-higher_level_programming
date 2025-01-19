@@ -7,7 +7,7 @@ This module contains a python script that takes in name of a
 state as an argument and lists all cities of that state.
 """
 
-import MySQLdb
+import pymysql
 import sys
 
 
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     database_name = sys.argv[3]
     state_name = sys.argv[4]
 
-    db = MySQLdb.connect(
+    db = pymysql.connect(
         host='localhost',
         port=3306,
         user=mysql_username,
@@ -35,12 +35,10 @@ if __name__ == "__main__":
         "ORDER BY cities.id"
     )
     cursor.execute(query, (state_name,))
-    cities = cursor.fetchall()
 
-    cities_list = []
-    for city in cities:
-        cities_list.append(city)
-    print(city)
+    rows = cursor.fetchall()
+    cities = [row[0] for row in rows]
+    print(", ".join(cities))
 
     if 'cursor' in locals():
         cursor.close()
