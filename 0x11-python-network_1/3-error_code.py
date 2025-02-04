@@ -7,6 +7,7 @@ exception handling
 '''
 
 import urllib.request
+import urllib.error
 import sys
 
 
