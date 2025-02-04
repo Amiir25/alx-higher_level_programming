@@ -27,7 +27,7 @@ def main():
             return "No result"
 
         id = response_json.get("id")
-        name = response_json("name")
+        name = response_json.get("name")
 
         print("[{}] {}".format(id, name))
 
