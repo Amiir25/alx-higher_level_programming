@@ -24,12 +24,13 @@ def main():
     try:
         response_json = response.json()
         if not response_json:
-            return "No result"
+            print("No result")
 
-        id = response_json.get("id")
-        name = response_json.get("name")
+        else:
+            id = response_json.get("id")
+            name = response_json.get("name")
 
-        print("[{}] {}".format(id, name))
+            print("[{}] {}".format(id, name))
 
     except ValueError:
         print("Not a valid JSON")
