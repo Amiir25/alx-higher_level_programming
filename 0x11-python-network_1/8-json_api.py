@@ -2,8 +2,8 @@
 '''
 8-json_api.py
 
-Sends a POST request with a letter and extracts 'id' and 'name' values
-of the response if it is a valid JSON
+Sends a request to a URL and desplays the body of the response with
+exception handling using 'requests' package
 '''
 
 import requests
