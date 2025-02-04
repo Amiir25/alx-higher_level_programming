@@ -20,6 +20,6 @@ if __name__ == "__main__":
     email = sys.argv[2]
 
     data = {"email": email}
-    responses = requests.post(url, data=data)
+    response = requests.post(url, data=data)
 
     print(response.text)
