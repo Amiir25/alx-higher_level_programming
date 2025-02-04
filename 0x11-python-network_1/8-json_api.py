@@ -2,19 +2,24 @@
 '''
 8-json_api.py
 
-Sends a request to a URL and desplays the body of the response with
-exception handling using 'requests' package
+Sends a POST request with a letter using 'requests' package.
 '''
 
 import requests
 import sys
 
 
-if __name__ == "__main__":
-    url = "http://0.0.0.0:5000/search_user"
-    q = sys.argv[1] if len(sys.argv) == 2 else ""
+def main():
+    '''
+    Sends a POST request with a letter 'q' and extracts 'name' and
+    'id' values of the response if it is a valid JSON.
+    '''
 
-    response = requests.post(url, q)
+    url = "http://0.0.0.0:5000/search_user"
+    letter = sys.argv[1] if len(sys.argv) == 2 else ""
+
+    data = {"q": letter}
+    response = requests.post(url, data=data)
 
     try:
         response_json = response.json()
@@ -28,3 +33,7 @@ if __name__ == "__main__":
 
     except ValueError:
         print("Not a valid JSON")
+
+
+if __name__ == "__main__":
+    main()
