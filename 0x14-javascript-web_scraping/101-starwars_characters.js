@@ -20,24 +20,33 @@ request(filmUrl, (error, response, body) => {
 
   const data = JSON.parse(body);
   const characters = data.characters;
-  const names = [];
 
-  for (const charUrl of characters) {
-    request(charUrl, (error, response, body) => {
-      if (error) {
-        console.error(error);
-      }
+  // Create an array of promises to fetch character details
+  const characterPromises = characters.map((charUrl) => {
+    return new Promise((resolve, reject) => {
+      request(charUrl, (error, response, body) => {
+        if (error) {
+          reject(error);
+          return;
+        }
 
-      if (response.statusCode !== 200) {
-        console.error(`Unable to fetch. Status code: ${response.statusCode}`);
-      }
+        if (response.statusCode !== 200) {
+          reject(`Unable to fetch. Status code: ${response.statusCode}`);
+          return;
+        }
 
-      const charData = JSON.parse(body);
-      names.push(charData.name);
+        const charData = JSON.parse(body);
+        resolve(charData.name); // Resolve the character's name
+      });
     });
-  }
+  });
 
-  for (const name of names) {
-    console.log(name);
-  }
+  // Wait for all character requests to complete before printing
+  Promise.all(characterPromises)
+    .then((names) => {
+      names.forEach((name) => console.log(name));
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 });
