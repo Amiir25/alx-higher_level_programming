@@ -31,7 +31,7 @@ request(filmUrl, (error, response, body) => {
         }
 
         if (response.statusCode !== 200) {
-          reject(`Unable to fetch. Status code: ${response.statusCode}`);
+          reject(new Error(`Unable to fetch. Status code: ${response.statusCode}`));
           return;
         }
 
