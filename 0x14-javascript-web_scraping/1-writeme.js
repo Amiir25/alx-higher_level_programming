@@ -1,16 +1,16 @@
 #!/usr/bin/node
 
 const fs = require('fs');
-const file = process.argv[2];
-const content = process.argv.slice(3).join(' ');
+const filePath = process.argv[2];
+const content = process.argv[3];
 
-if (!file || !content.trim()) {
-  console.error('Usage: ./1-writeme.js <file_path> <String>');
+if (!filePath || !content) {
+  console.error("Usage: ./1-writeme.js <file_path> <string>");
   process.exit(1);
 }
 
-fs.writeFile(file, content, 'utf8', (err) => {
+fs.writeFile(filePath, content, 'utf8', (err) => {
   if (err) {
-    console.log(err);
+    console.error(err);
   }
 });
