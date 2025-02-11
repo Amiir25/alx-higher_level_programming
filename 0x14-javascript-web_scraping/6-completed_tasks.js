@@ -4,13 +4,13 @@ const request = require('request');
 const Url = process.argv[2];
 
 if (!Url) {
-  console.error("Usage: ./6-completed_tasks.js <API_URL>");
+  console.error('Usage: ./6-completed_tasks.js <API_URL>');
   process.exit(1);
 }
 
 request(Url, (error, response, body) => {
   if (error) {
-    console.error("Error fetching API:", error);
+    console.error('Error fetching API:', error);
   }
 
   if (response.statusCode !== 200) {
